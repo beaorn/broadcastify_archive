@@ -1,10 +1,15 @@
 # brodcastify_archive
 
-Small ruby script to grab all the archives of a broadcastify feed you own per date and join them together into a single mp3 file for personal use.
+Small ruby script to automate grabbing all the archives of a broadcastify feed you own per date and combine them together into a single mp3 file.
+
+**Notes**:
+
+- Minimum File Size: Currently it skips adding any archive files that have a file size smaller than 75 kB, this become an optional argument in the future to allow adjustment.
+- Overlaps: You may occasionally notice small repeating sections of audio, this is because of the way broadcastify creates the archive files that commonly include overlaps at the start of new files.
 
 ## Setup
 
-You will need to be running Linux and have Ruby >= 2.5 installed.
+You will need to be running Linux and have [Ruby installed](https://www.ruby-lang.org/en/documentation/installation/). 
 
 Install packages for working with mp3s (Ubuntu/Debian):
 
